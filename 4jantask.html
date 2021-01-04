@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <select id="item" onchange="products()">
+        <option value="Laptop">Laptop</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Powerbank">Powerbank</option>
+        <option value="Earphones">Earphones</option>
+        <option value="Shoes">Shoes</option>
+        </select>
+        <h1 id="productsinfo"></h1>
+        <script>
+         products();
+         function products(){
+             var item=document.getElementById("item").value;
+
+             switch(item){
+                 case "Laptop":document.getElementById("productsinfo").innerHTML="Price:20,000 Brand:Lenovo";break;
+                 case "Mobile":document.getElementById("productsinfo").innerHTML="Price:10,000 Brand:Mi";break;
+                 case "Powerbank":document.getElementById("productsinfo").innerHTML="Price:2000 Brand:Mi";break;
+                 case "Earphones":document.getElementById("productsinfo").innerHTML="Price:1000 Brand:Iphone";break;
+                 case "Shoes":document.getElementById("productsinfo").innerHTML="Price:800 Brand:Nike";break;
+             }
+         }
+        </script>
+    </body>
+</html>
