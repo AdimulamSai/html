@@ -1,0 +1,35 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <select id="countries" onchange="country()">
+        <option value="India">India</option>
+        <option value="Austrila">Austrila</option>
+        <option value="America">America</option>
+        <option value="Japan">Japan</option>
+        <option value="Malaysia">Malaysia</option>
+        </select>
+        <h1 id="countryinfo"></h1>
+        <script>
+            country();
+            function country(){
+                var countries=document.getElementById("countries").value;
+
+            switch(countries){
+                 case "India":document.getElementById("countryinfo").innerHTML="1.Andhra Pradesh 2.Arunachal Pradesh 3.Assam 4.Bihar";break;
+                 case "Austrila":document.getElementById("countryinfo").innerHTML="1.Nueva Gales del Sur 2.Queensland 3.Victoria 4.Tasmania 5.Australia Occidental";break;            
+                case "America":document.getElementById("countryinfo").innerHTML="Alabama 2.Alaska 3.Arkanasa 4.california 5.colorado";break;
+                case "Japan":document.getElementById("countryinfo").innerHTML="1.Akita 2.Aomori 3.Ehime 4.Ehime 5.Fukuoka";break;
+                case "Malaysia":document.getElementById("countryinfo").innerHTML="1.Sabah 2.Selangor 3.Sawarak 4.Johor 5.panang";break;
+                
+                
+                }
+
+
+
+            }
+
+        </script>
+    </body>
+</html>
