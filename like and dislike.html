@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+      background-color: powderblue;
+    }
+    img{
+      height:500px;
+      width:700px;
+    }
+  </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body align="center">
+  <h1>Nature:</h1>
+<img src="nature.jpg"><p>ddccscsdcusdsdsdhcsd ksdjschocbj bj zxn  bjzx zx bjzx xbz zx zx bjzx zx zx bzx x zx x  chcffhfvfv</p><br><br>
+<i class="fa fa-thumbs-up" onclick="thumsup()" style="font-size:100px; color:red"></i><span id="like_id">0</span>
+<i class="fa fa-thumbs-down" onclick="thumsdown()" style="font-size:100px; color:greenyellow"></i><span id="dislike_id">0</span>
+<script>
+var like=1;
+var dislike=0;
+function thumsup(){
+if(document.getElementById("like_id").innerHTML == 0){
+  like=1;
+  dislike=0;
+  document.getElementById("like_id").innerHTML=like;
+  document.getElementById("dislike_id").innerHTML=dislike;
+  }
+  else{
+       like=0;
+	   document.getElementById("like_id").innerHTML=like;
+	   }
+	   }
+	   function thumsdown(){
+if(document.getElementById("dislike_id").innerHTML == 0){
+  like=0;
+  dislike=1;
+  document.getElementById("like_id").innerHTML=like;
+  document.getElementById("dislike_id").innerHTML=dislike;
+  }
+  else{
+       like=0;
+	   document.getElementById("like_id").innerHTML=like;
+	   }
+	   }
+</script>
+
+</body>
+</html>
