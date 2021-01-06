@@ -1,0 +1,18 @@
+HOW DOES WEB BROWSER WORK?
+-->A browser is a software application used to locate, retrieve and display content on the World Wide Web, including Web pages, images, video and other files. 
+As a client/server model, the browser is the client run on a computer that contacts the Web server and requests information. 
+The Web server sends the information back to the Web browser which displays the results on the computer or other Internet-enabled device that supports a browser.
+
+-->Today’s browsers are fully-functional software suites that can interpret and display HTML Web pages, applications, JavaScript, AJAX and other content hosted on Web servers. 
+Many browsers offer plug-ins which extend the capabilities of the software so it can display multimedia information (including sound and video), or the browser can be used to perform tasks such as videoconferencing, 
+to design web pages or add anti-phishing filters and other security features to the browser.
+-----------------------------------------------------------------------------------------------
+
+Diff b/w for loop and while loop?
+
+FOR loop::
+Declaration---->for(initialization; condition; iteration){
+                     //body of 'for' loop
+                    }
+Format--------->   Initialization, condition checking, iteration statement 
+                    are written at the top of the loop.
