@@ -1,0 +1,20 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <label>username:</label>
+        <input type="text" placeholder="username" id="user">
+        <label>password:</label>
+        <input type="password" placeholder="password" id="pass">
+        <button onclick="login()">submit</button>
+        <script>
+            function login(){
+            var username=document.getElementById("user").value;
+            var password=document.getElementById("pass").value;
+            alert("User Name: "+ username + "\r\Password:"+password);
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <heaad>
+
+    </heaad>
+    <body>
+     <label>phone_number:</label>
+     <input type="text" placeholder="phone_number" id="phone">  <button onclick="createOTP()">getotp</button><br><br>
+     <label>password:</label>
+     <input type="password" placeholder="password" id="pass"><br><br>
+     <label>otp</label>
+     <input type="text" placeholder="OTP" id="otp"><br><br>
+     <button onclick="valid()">submit</button>   
+    </body>
+    <script>
+    function createOTP(){
+        event.preventDefault();
+     var phone_number=document.getElementById("phone").value;
+     if(phone_number == "0123456789"){
+        alert("you login in to otp 1234 ");
+    }else{
+        alert("invalid pbone number");
+    }
+    }
+    function valid(){
+        var password=document.getElementById("pass").value;
+        var otp=document.getElementById("otp").value;
+        if(password == "adimulam" && otp== "1234"){
+          alert("login success");
+        }else{
+            alert("login fail");
+        }
+        if(password != "adimulam"){
+            alert("password is invalid");
+        }
+        if(otp != "1234"){
+            alert("otp is invalid");
+        }
+        }
+    
+          
+ </script>
+ </body>
+</html>

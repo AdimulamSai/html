@@ -1,0 +1,56 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+    
+    <form>
+  <label>Number:</label>
+  <input type="text" placeholder="EnterNumber" id="phone_number"><button onclick="createOTP">GET OTP</button><br><br>
+  <label>Password</label>
+  <input type="password" placeholder="Password" id="pass"><br><br>
+  <label>OTP:</label>
+  <input type="text" placeholder="Eneter OTP" id="otp">
+    <button onclick="validate()">submit</button>
+    </form>
+    <script>
+        function createOTP(){
+            event.preventdefault();
+
+        var phone_number=document.getElementById("phone_number").value;
+            if(phone_number == "9876543210"){
+               alert("your otp to login is 1111");
+            }
+            else{
+                alert("wrong mobile number");
+            }
+        }
+        function validate(){
+            var password=document.getElementById("pass").value;
+            var otp=document.getElementById("otp").value;
+            if( password == "abc" && otp == "1111"){
+                  redirect(true);
+            }
+            else{
+                redirect(false);
+
+            }
+        }
+       var redircet=function(result){
+           event.preventdefault();
+           alert("I am in redirect!");
+                    if(result == true){
+                        console.log("result",result);
+                      window.location.href="userhome.html";
+                      redirect=null;
+                    }
+                    else{
+                        alert("wrong credintials");
+                        redirect=null;
+                    }
+       }
+
+    </script>
+    </body>
+</html>

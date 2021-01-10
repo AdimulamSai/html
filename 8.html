@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+    <label>username:</label>
+    <input type="text" placeholder="username"  id="user"><br><br>
+    <label>password:</label>
+    <input type="password" placeholder="password" id="pass"><br><br>
+    <button onclick="validate()">submit</button>
+    <script>
+        function validate(){
+         var username=document.getElementById("user").value;
+         var password=document.getElementById("pass").value;
+         if(username == "sai" && password == "zxcvbnm"){
+             alert("login");
+         }else{
+             alert("login fail")
+         }
+         if(username != "sai"){
+             alert("username is incorrect");
+         }
+         if(password != "zxcvbnm"){
+             alert("password is incorrect");
+         }
+        }
+    </script>
+    </body>
+</html>

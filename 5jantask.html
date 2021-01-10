@@ -1,138 +1,80 @@
 <html>
    <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+
    </head>
-<style>
-   .container1{
-        border: 4px solid gray;
-        padding:30px;
-        height: auto;
-        width: 500px;
-        border-radius: 30px;
-        margin:20px 40px;
-     }
-    
-    #pname{
-        color:indigo;
-        font-size: 26px;
-    }
-    #price{
-        color:red;
-        font-size: 26px; 
-    }
-   #rating{
-     color:white;
-     border-radius: 10px;
-     background-color: green;
-     display: inline;
-     font-size: 34px;
-     padding:5px 20px;
-     width:120px;
+   <body>
+      
+<ul id="productsList">
 
- }
- .con{
-     color:rgba(1, 255, 22, 0.822);
-     background-color: rgb(74, 107, 255);
-     
-     text-align:center;
-     padding-top: 20px;
-     padding-bottom: 20px;
- }
-</style>  
-</head> 
-<script>
+</ul>
+      <select onchane="filter" id="filter()">
+         <option value="Lh">low to high</option>
+         <option value="hl">high to low</option>
+         <option value="lr">low rating</option>
+         <option value="hr">high rating</option>
+      </select>
+      
+      <script>
+      var products=[
+         {
+           name:"POCO M2 Pro (Out of the Blue, 64 GB)  (6 GB RAM)",
+           price:12000,
+           rating:"3 ****",
+           imageUrl:"https://rukminim1.flixcart.com/image/416/416/kcauaa80/mobile/b/b/u/poco-m2-pro-mzb9628in-original-imaftg8dbxfqhddh.jpeg?q=70"
+         },
+         {
+         name:"Striped Men Hooded Neck Red Black T-Shirt",
+         price:1000,
+         rating:"4 ***",
+         imageUrl:"https://rukminim1.flixcart.com/image/800/960/kf1fo280hlty2aw-0/t-shirt/w/s/e/-original-imafdfvvr8hqdu65.jpeg?q=50",
+         },
+         {
+            name:"Men Brown Casual Sandal",
+            price:400,
+            rating:"5 ***",
+            imageUrl:"https://rukminim1.flixcart.com/image/800/960/ke7ff680-0/sandal/d/p/m/strap-5o53-rising-wolf-dark-brown-original-imafuy4pkhc7hxpf.jpeg?q=50",
+         },
+         {
+            name:"Solid Single Breasted Party Men Full Sleeve Blazer  (Blue)",
+            price:1259,
+            rating:"2.5 ***",
+            imageUrl:"https://rukminim1.flixcart.com/image/800/960/k7qinbk0/blazer/h/f/b/34-ndb01-trulyfab-original-imafpwycg4xs2vkj.jpeg?q=50",
+         },
 
-  var products=[
-     {
-     pname="TCL 55 5-Series 4K UHD Dolby Vision HDR QLED ROKU Smart TV - 55S535",
-     price="30000/-",
-     rating="4 *****",
-     imgURL="https://images-na.ssl-images-amazon.com/images/I/91tMNAWWsPL._AC_SL1500_.jpg",
-     },
-       {
-        pname="Bedtime Originals Twinkle Toes Peluche de elefante rosa, Hazel",
-        price="2000/-",
-        rating="3 ****",
-        imgURL="https://images-na.ssl-images-amazon.com/images/I/81ZB62prn-L._AC_SL1500_.jpg"
-       },
-   
-        {
-           pname="Garmin Forerunner 235, Nuevo, talla única , Negro/Gris",
-           price="5000/-",
-           rating="3.5 ***",
-           imgURL="https://images-na.ssl-images-amazon.com/images/I/819WMWm6NoL._AC_SL1500_.jpg"
-        },
-        {
-         pname="Vivo Y50 (Pearl White, 8GB RAM, 128GB Storage) with No Cost EMI/Additional",
-         price="11,000",
-         rating="4.3 ***",
-         imgURL="https://images-na.ssl-images-amazon.com/images/I/514ETCdN3CL._SL1200_.jpg"
-      },
-    {
-      pname="VSK Bean Bag XXXL Sofa Mudda Cover Black",
-         price="20,000",
-         rating="3.4 ****",
-         imgURL="https://images-na.ssl-images-amazon.com/images/I/51QO4iATxCL._SL1088_.jpg"
-    },
-   {
-         pname="GURUDEV Lovable Hug able Cute Extra Large Teddy Bear (Best for Someone Special) (6 feet, Panda)",
-         price="2,500/-",
-         rating="3.5 ***",
-         imgURL="https://images-na.ssl-images-amazon.com/images/I/61EVTtFz4XL._SL1280_.jpg"
-   },
-   {
-         pname="Mivi DuoPods M20 True Wireless Bluetooth Headset  (Black, True Wireless)",
-         price="5,000",
-         rating="4.3 ***",
-         imgURL="https://rukminim1.flixcart.com/image/416/416/kbtp0280/headphone/8/v/b/tedpm20-bk-mivi-original-imaft33hphgycrwz.jpeg?q=70"
-   },
-   {
-      pname="WNDR-13 Running Shoes For Men  (Green, Grey)",
-         price="1,000",
-         rating="4.3 ***",
-         imgURL="https://rukminim1.flixcart.com/image/800/960/juip0nk0/shoe/y/6/e/wonder-13-7-asian-grey-original-imaenr72gssfxrbj.jpeg?q=50"
-   },
-   {
-      pname="Sports Design Adjustable Length Blue Dial Analog Watch - For Men",
-         price="5,500",
-         rating="4.3 ***",
-         imgURL="https://rukminim1.flixcart.com/image/800/960/k4ohqq80/watch/z/c/k/sports-design-adjustable-length-foxter-original-imafnj6bmb2vpfgu.jpeg?q=50",
-   },
-   {
-      pname="Arrow Blk Analog Watch - For Men",
-         price="210/-",
-         rating="4.3 ***",
-         imgURL="https://rukminim1.flixcart.com/image/800/960/k6gsk280/watch/s/h/g/arrow-blk-daniel-jubile-original-imafjvbehhn88rm9.jpeg?q=50",
-   },
-   {
-       pname="Solid Single Breasted Party, Wedding, Festive Men Full Sleeve Blazer  (Blue)",
-         price="3,000",
-         rating="4.3 ***",
-         imgURL="https://rukminim1.flixcart.com/image/800/960/jnoxa4w0/blazer/j/z/j/xl-velblz-rb-honey-fashion-original-imafaap5phyfphg4.jpeg?q=50",
-   },
-   {
-         pname="Full Sleeve Printed Men Sweatshirt",
-         price="1496/-",
-         rating="4.5 *",
-         imgURL="https://rukminim1.flixcart.com/image/800/960/kiyw9e80/sweatshirt/k/e/n/m-220050722-5-monte-carlo-original-imafyjphrxe5qu6x.jpeg?q=50",
-   }
-]
-       function insertOption(){
-        var con = document.getElementById("container");
+      ]
+      var index=0;
+      var product=document.getElementById("productsList");
+      for(i = 0; i < products.length; i++){
 
-       for(i=0; i < products.length ; i++){
-          var p = products[i];
-
-         con.innerHTML += "<div class='container1 col-sm-3 col-md-4'><span style='border:5px solid red;border-radius:30px;font-size:26px;padding:5px;'>0"+(i+1)+"</span><br><br><p id='pname'>"+ p.pname+"</p><img src="+ p.imgURL +"  height='500px'><p id='price'>Price : "+p.price+"</p><p id='rating'>"+p.rating+"</p></div> ";
-       }
+      var product=products[index];
+      product.innerHTML=product.innerHTML+ "<li>" + product.name+" :   " + product.price + "   " +product.rating+ "  " +" " +"<img height='30px' width='20px' src='"+product.imgSrc+'">" + "</li>" +        
+                       index++;
+      
       }
-   </script>
-<body onload="insertOption();">
-    <div class="con">
-       <h1><i>Sai Mall</i></h1>
-       </div>
-       <div class="row" id="container">
-       </div>
+      function filter(){
+         var choice=document.getElementByid("filter").value;
+         console.log(choice);
+         switch(choice){
+            case "LtoH":LowtoHigh(); break;
+            case "HtoL":HightoLow();break;
+            case "Lr"  :LowRating();break;
+            case  "Hr" :HighRating();break;
 
-</body>
-</html>
+         }
+      }
+      function LowtoHigh(){
+         console.log("you selected low to high");
+      }
+      function HightoLow(){
+         console.log("you selected high to low");
+      }
+      function LowRating(){
+         console.log("you selected low rating");
+
+      }
+      function HighRating(){
+         console.log("you selected high rating");
+      }
+      </script>
+   </body>
+</html> 
