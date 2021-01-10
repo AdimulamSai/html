@@ -1,13 +1,20 @@
 <html>
    <head>
+      <style>
+  #rating{
+     color:red;
+  } 
+  
+      </style>
 
    </head>
+
    <body>
       
 <ul id="productsList">
 
 </ul>
-      <select onchane="filter" id="filter()">
+      <select onchange="filter()" id="filter()">
          <option value="Lh">low to high</option>
          <option value="hl">high to low</option>
          <option value="lr">low rating</option>
@@ -20,34 +27,34 @@
            name:"POCO M2 Pro (Out of the Blue, 64 GB)  (6 GB RAM)",
            price:12000,
            rating:"3 ****",
-           imageUrl:"https://rukminim1.flixcart.com/image/416/416/kcauaa80/mobile/b/b/u/poco-m2-pro-mzb9628in-original-imaftg8dbxfqhddh.jpeg?q=70"
+           imageURL:"https://rukminim1.flixcart.com/image/416/416/kcauaa80/mobile/b/b/u/poco-m2-pro-mzb9628in-original-imaftg8dbxfqhddh.jpeg?q=70",
          },
          {
          name:"Striped Men Hooded Neck Red Black T-Shirt",
          price:1000,
          rating:"4 ***",
-         imageUrl:"https://rukminim1.flixcart.com/image/800/960/kf1fo280hlty2aw-0/t-shirt/w/s/e/-original-imafdfvvr8hqdu65.jpeg?q=50",
+         imageURL:"https://rukminim1.flixcart.com/image/800/960/kf1fo280hlty2aw-0/t-shirt/w/s/e/-original-imafdfvvr8hqdu65.jpeg?q=50",
          },
          {
             name:"Men Brown Casual Sandal",
             price:400,
             rating:"5 ***",
-            imageUrl:"https://rukminim1.flixcart.com/image/800/960/ke7ff680-0/sandal/d/p/m/strap-5o53-rising-wolf-dark-brown-original-imafuy4pkhc7hxpf.jpeg?q=50",
+            imageURL:"https://rukminim1.flixcart.com/image/800/960/ke7ff680-0/sandal/d/p/m/strap-5o53-rising-wolf-dark-brown-original-imafuy4pkhc7hxpf.jpeg?q=50",
          },
          {
             name:"Solid Single Breasted Party Men Full Sleeve Blazer  (Blue)",
             price:1259,
             rating:"2.5 ***",
-            imageUrl:"https://rukminim1.flixcart.com/image/800/960/k7qinbk0/blazer/h/f/b/34-ndb01-trulyfab-original-imafpwycg4xs2vkj.jpeg?q=50",
+            imageURL:"https://rukminim1.flixcart.com/image/800/960/k7qinbk0/blazer/h/f/b/34-ndb01-trulyfab-original-imafpwycg4xs2vkj.jpeg?q=50",
          },
 
       ]
       var index=0;
-      var product=document.getElementById("productsList");
+      var ul=document.getElementById("productsList");
       for(i = 0; i < products.length; i++){
 
       var product=products[index];
-      product.innerHTML=product.innerHTML+ "<li>" + product.name+" :   " + product.price + "   " +product.rating+ "  " +" " +"<img height='30px' width='20px' src='"+product.imgSrc+'">" + "</li>" +        
+      ul.innerHTML=ul.innerHTML+ "<li>" + product.name+" :   " + product.price + " :  " +"<span id='rating'>" +product.rating+ "</span>"+ " "+"<img src="+product.imageURL+" height='200px' width='150'></span></li>";     
                        index++;
       
       }
@@ -75,6 +82,8 @@
       function HighRating(){
          console.log("you selected high rating");
       }
+      
       </script>
+      
    </body>
 </html> 
