@@ -1,0 +1,40 @@
+<html>
+     <head>
+
+     </head>
+       <body>
+         <script>
+           function employe(id,name,address){
+               this.employeeid=id;
+               this.ename=name;
+               this.eaddress=address;
+           }
+            var employes=[
+         {
+           id:"100",
+           name:"sai",
+           address:"guntur"
+         },
+         {
+           id:"200",
+           name:"ravi",
+           address:"chirala"
+        },
+        {
+            id:"562",
+            name:"naveen",
+            address:"hyderabad"
+        },
+    ]
+    
+     for(i=0;i<employes.length;i++){
+         
+     
+     var employes = new employe(employes[i].id,employes[i].name,employes[i].address);     
+         console.log(employes);
+     }
+    
+     employe();
+         </script>
+       </body>
+</html>

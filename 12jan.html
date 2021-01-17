@@ -1,0 +1,31 @@
+<html>
+<head>
+
+</head>
+<body>
+    Username:<input type="text" id="username">
+    <button onclick="usernamecheck()">submit</button>
+   <script>
+    function usernamecheck(){
+        event.preventDefault();
+        var username=document.getElementById("username").value;
+        var usernames=["kiran","sai","ravi"];
+        var isUserFound=false;
+        usernames.forEach(function(uname){
+            if(uname == username){
+                isUserFound=true;
+            }
+        })
+        console.log("isUserFound",isUserFound);
+       if(isUserFound == true){
+           alert("username is already taken");
+
+       }
+       else{
+         alert("username is available");
+       }
+    } 
+
+   </script>
+</body>
+</html>

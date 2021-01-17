@@ -14,11 +14,12 @@
          function valid(){
              var mobile_number=document.getElementById("number").value;
              var password=document.getElementById("pass").value;
-             if(mobile_number != "9876543210"){
+             if(mobile_number != "9876543210" && password != "adimulam"){
                  alert("mobile_number is invalid");
              }
-              if(password != "adimulam"){
-                  alert("password is invalid");
+             else{
+                 alert("password is invalid");
+             }
               }
              if(mobile_number == "9876543210" && password == "adimulam"){
                  alert("login success");
@@ -26,7 +27,9 @@
                  alert("login fail");
              }
              
-         }
+        
+        
+
          
              </script>   
     </body>

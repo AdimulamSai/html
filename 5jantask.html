@@ -15,12 +15,16 @@
 
 </ul>
       <select onchange="filter()" id="filter()">
-         <option value="Lh">low to high</option>
+         <option value="Lh" onclick="lowtohigh()" href="products.html">low to high</option>
          <option value="hl">high to low</option>
          <option value="lr">low rating</option>
          <option value="hr">high rating</option>
       </select>
-      
+      <script>
+         function lowtohigh(){
+            href="products.html";
+         }
+      </script>
       <script>
       var products=[
          {
