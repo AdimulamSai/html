@@ -1,0 +1,29 @@
+<html>
+    <heaad>
+        
+    </heaad>
+    <body>
+        Number:<input type="text" id="usernumber">
+        <button onclick="usernumbercheck()">submit</button>
+        <script>
+        function usernumbercheck(){
+            event.preventDefault()
+            var usernumber=document.getElementById("usernumber").value;
+            var usernumbers=[10,20,30,40,50,60];
+            var isUserFound=false;
+            usernumbers.forEach(function(usernumber){
+                if(usernumber == unumber){
+                    isUserFound=true;
+                }
+            })
+            console.log("isUserFound",isUserFound)
+            if(isUserFound==true){
+                alert("number is already taken");
+            }else{
+                alert("number is available");
+            }
+        }
+    
+        </script>
+    </body>
+</html>

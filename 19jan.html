@@ -1,0 +1,41 @@
+<html>
+    <head>
+
+    </head>
+<body>
+    <form>
+        Enter Task :<input type="text" id="task">
+   
+    <br><br>
+
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="removeTask()">Remove</button>
+</form>
+    
+
+    <ol id="tasks">
+
+    </ol>
+    <script>
+        var allTasks=[];
+        function addTask(){
+            event.preventDefault();
+            var task = document.getElementById("task").value;
+            allTasks.push(task);
+            displayTasks();
+
+        }
+         function displayTasks(){
+             var tasks = document.getElementById('tasks');
+             tasks.innerHTML="";
+              allTasks.forEach(function(task){
+               tasks.innerHTML = tasks.innerHTML+ "<li>" + task +"<input type='checkbox' name='check' value='"+task+"' id='check'></li>";
+
+              })
+         }
+         function removeTask(){
+             allTasks=[];
+         }
+    </script>
+</body>
+    </html>
