@@ -1,0 +1,32 @@
+<html>
+<head>
+    <body>
+        <h1>Atm Machine</h1>
+        <p id="demo"></p>
+        <script>
+         function Atm(inquiry,withdraw,deposit){
+             var availbalance=25000;
+             var a=inquiry(availbalance);
+             var b=deposit(availbalance);
+             var c=withdraw(availbalance);
+             if(a){
+                 availbalance=inquiry(availbalance);
+             }
+             else if(b){
+                 availbalance=availbalance-withdraw;
+                 if(withdraw>availbalance){
+                     alert("insuffficient balance");
+                 }
+                }
+                else{
+               availbalance=availbalance+deposit;
+                }
+             
+             return availbalance;
+             document.getElementById("demo").innerHTML=Atm;
+            
+         }
+        </script>
+    </body>
+
+</html>

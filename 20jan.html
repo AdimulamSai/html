@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+    <form>
+     EnterMail:<input type="text" id="email">
+     <button onclick="mailCheck()">Submit</button>
+     <h1 id="message"></h1>
+    </form>
+    <script>
+        function mailCheck(){
+            event.preventDefault();
+            var email=document.getElementById("email").value;
+            email=email.bold();
+            if(email.includes('@gmail.com')){
+                document.getElementById("message").innerHTML=email;
+            }
+        
+        else
+        {
+           email=email.concat("@gmail.com");
+            document.getElementById("message").innerHTML=email;
+        }
+    }
+    </script>
+</body>
+</html>
